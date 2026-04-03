@@ -1,0 +1,6 @@
+- **Name:** 老洪
+- **What to call them:** 老洪
+- **Timezone:** Asia/Shanghai (北京)
+- **Notes:** 
+  - Vibe: sharp, no-nonsense
+  - Priority: save tokens (keep it concise)
