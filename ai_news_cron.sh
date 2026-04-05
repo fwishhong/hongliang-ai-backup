@@ -46,8 +46,7 @@ echo "=== [$(date '+%Y-%m-%d %H:%M')] AI Signal Board 新闻汇报 ==="
 
 # 1. 更新新闻数据
 cd "$NEWS_DIR"
-source .venv/bin/activate
-python scripts/update_news.py --output-dir data --window-hours 24 2>&1
+.venv/bin/python scripts/update_news.py --output-dir data --window-hours 24 2>&1
 
 # 2. 根据时间生成不同报告
 python3 << ENDPY
