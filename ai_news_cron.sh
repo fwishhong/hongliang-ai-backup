@@ -44,9 +44,24 @@ touch "$LOCK_FILE"
 
 echo "=== [$(date '+%Y-%m-%d %H:%M')] AI Signal Board 新闻汇报 ==="
 
-# 1. 更新新闻数据
+# 1. 更新新闻数据（最多等120秒，防止卡住）
 cd "$NEWS_DIR"
-.venv/bin/python scripts/update_news.py --output-dir data --window-hours 24 2>&1
+{
+  .venv/bin/python scripts/update_news.py --output-dir data --window-hours 24 2>&1
+} &
+UPDATE_PID=$!
+for i in $(seq 1 24); do
+  sleep 5
+  if ! ps -p $UPDATE_PID > /dev/null 2>&1; then
+    echo "=== 数据更新完成 ==="
+    break
+  fi
+  if [ $i -eq 24 ]; then
+    echo "=== 更新超时，强制终止 ==="
+    kill $UPDATE_PID 2>/dev/null
+  fi
+done
+wait $UPDATE_PID 2>/dev/null
 
 # 2. 根据时间生成不同报告
 python3 << ENDPY
