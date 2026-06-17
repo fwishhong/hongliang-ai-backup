@@ -21,25 +21,9 @@ $DATA
 
 来源: AI Signal Board"
 
-# 发微信
-openclaw message send --channel openclaw-weixin \
-  --target "o9cq807HpYgjyGEiwS4skQyWez-o@im.wechat" \
+# 发飞书
+openclaw message send --channel feishu \
+  --target "ou_97e8a151e0a917023ffa52d4c1f20372" \
   --message "$MSG" > /dev/null 2>&1
-
-# 发Telegram (备用)
-curl -s -X POST "https://api.telegram.org/bot8258919046:AAGc1T0iGNBvL7diVzaDgTWpa7x9syin14g/sendMessage" \
-  -d "chat_id=8091679787" -d "text=$MSG" > /dev/null
-
-# 发飞书 - 需要tenant_access_token
-# 先获取token
-TOKEN=$(curl -s -X POST "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal" \
-  -H "Content-Type: application/json" \
-  -d '{"app_id":"cli_a90adbc0b278dcda","app_secret":"__OPENCLAW_REDACTED__"}' | python3 -c "import json,sys; print(json.load(sys.stdin).get('tenant_access_token',''))")
-
-# 发送消息
-curl -s -X POST "https://open.feishu.cn/open-apis/im/v1/messages/receive_open_id" \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d "{\"receive_id_type\":\"open_id\",\"receive_id\":\"ou_97e8a151e0a917023ffa52d4c1f20372\",\"msg_type\":\"text\",\"content\":\"$MSG\"}" > /dev/null
 
 echo "Done: $(date)"

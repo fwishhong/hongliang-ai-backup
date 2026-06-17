@@ -44,24 +44,9 @@ touch "$LOCK_FILE"
 
 echo "=== [$(date '+%Y-%m-%d %H:%M')] AI Signal Board 新闻汇报 ==="
 
-# 1. 更新新闻数据（最多等120秒，防止卡住）
+# 1. 更新新闻数据（直接运行，最多等120秒）
 cd "$NEWS_DIR"
-{
-  .venv/bin/python scripts/update_news.py --output-dir data --window-hours 24 2>&1
-} &
-UPDATE_PID=$!
-for i in $(seq 1 24); do
-  sleep 5
-  if ! ps -p $UPDATE_PID > /dev/null 2>&1; then
-    echo "=== 数据更新完成 ==="
-    break
-  fi
-  if [ $i -eq 24 ]; then
-    echo "=== 更新超时，强制终止 ==="
-    kill $UPDATE_PID 2>/dev/null
-  fi
-done
-wait $UPDATE_PID 2>/dev/null
+.venv/bin/python scripts/update_news.py --output-dir data --window-hours 24 2>&1 || echo "=== 更新脚本异常退出 ==="
 
 # 2. 根据时间生成不同报告
 python3 << ENDPY
@@ -93,16 +78,15 @@ if hour == 8:
             except:
                 pass
     
-    items = night_items[:30] if night_items else data["items"][:15]
+    items = (night_items if night_items else data["items"])[:30]
+    count = len(items)
     
     report = f"""# 🌙 夜间要闻回顾
 
-**{timestamp}** | **夜间({len(night_items)}条)**
+**{timestamp}** | **{count}条**
 
 ---
 """
-    if len(night_items) > 30:
-        report += f"*仅显示前30条，共{len(night_items)}条*\n\n"
 
 else:
     # 读取上次发送时间
@@ -172,21 +156,21 @@ print(report)
 # except Exception as e:
 #     print(f"❌ Telegram发送失败: {e}")
 
-# 发送到微信 - 使用 openclaw-weixin CLI
+# 发送到飞书
 try:
     import subprocess
-    wechat_user = "o9cq807HpYgjyGEiwS4skQyWez-o@im.wechat"
+    feishu_user = "ou_97e8a151e0a917023ffa52d4c1f20372"
     cmd = [
         "openclaw", "message", "send",
-        "--channel", "openclaw-weixin",
-        "--target", wechat_user,
+        "--channel", "feishu",
+        "--target", feishu_user,
         "--message", report[:4000]
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
     if result.returncode == 0:
-        print(f"✅ 发送到微信: 成功")
+        print(f"✅ 发送到飞书: 成功")
     else:
-        print(f"❌ 微信发送失败: {result.stderr}")
+        print(f"❌ 飞书发送失败: {result.stderr}")
 except Exception as e:
     print(f"❌ 微信发送失败: {e}")
 

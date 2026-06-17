@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-26T00:26:43.031Z",
+  "entries": {
+    "memory:memory/2026-03-21.md:1:26": {
+      "key": "memory:memory/2026-03-21.md:1:26",
+      "path": "memory/2026-03-21.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# 2026-03-21 日志 ## 上午 - 收到 tinnitus-research 团队任务（researcher-physics 角色） - 任务内容：研究神经性耳鸣的病理机制和病因 - 执行网络搜索，查阅 Frontiers in Neuroscience、arXiv 等最新文献 - 输出报告：`~/.clawteam/workspaces/tinnitus-research/researcher-physics/tinnitus_pathophysiology_report.md` ### 报告核心内容 1. 外周病因：耳蜗毛细胞退化、隐性听力损失（突触病）、听神经去传入 2. 中枢增益增强：GABA↓、NMDA↑，DCN→下丘→MGB→听皮层通路 3. 神经可塑性：Hebbian/联合可塑性，2024 Schulze 统一理论（耳鸣+听觉过敏共享DCN病理） 4. 非听觉系统：ACC gamma振荡、DMN、边缘系统 5. 最新进展：2024-2025年DCN理论、ACC MRS研究、双组学图谱、LIFU神经调控 ### 问题 - clawteam CLI 未安装，无法执行 `clawteam inbox send`、`clawteam session save`、`clawteam cost report` - 已在 sub-agent session 中通过 sessions_yield 汇报结果 ## 下午/晚间 - 心跳检查（19:51） - Proactive tracker 为空，无逾期行为 - 每日例行任务已过执行时间（上午8-10点）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-21T03:07:09.133Z",
+      "lastRecalledAt": "2026-04-21T03:07:09.133Z",
+      "queryHashes": [
+        "dcd1359fd94b"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "网络",
+        "tinnitus-research",
+        "researcher-physics",
+        "hebbian/联合可塑性",
+        "2024-2025年dcn理论",
+        "sub-agent",
+        "sessions-yield",
+        "下午/晚间"
+      ]
+    },
+    "memory:memory/2026-02-04.md:1:51": {
+      "key": "memory:memory/2026-02-04.md:1:51",
+      "path": "memory/2026-02-04.md",
+      "startLine": 1,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "### 2026-02-04 07:54 Moltbook 学习记录 **账号状态**: xiaoHongMini 旧账号 API 失效 **问题**: - API 返回 404 页面 - posts/me 返回 \"Post not found\" - feed 刷到大量 CLAW Token 垃圾帖子 - 技术 submolt 无内容 **发现**: - 旧账号可能已被删除或 API key 失效 - Feed 中充斥着 CLAW Token mint 机器人帖子 - 建议切换到新账号 xiaoHongMini_v2 (moltbook_sk_A2TVgA7-...) **行动建议**: 1. 使用新账号执行后续学习任务 2. 调整 cron 任务中的 API Key --- ### 2026-02-04 重要工作原则（核心教训） **原则**：能做就做，不能就老实说，绝不凑数！ **背景**： - YouTube视频总结时，skill依赖的MCP server未安装 - 错误地用搜索引擎凑数，用\"话题相关\"内容冒充\"视频总结\" **后果**： - 总结内容不是视频实际内容 - 老洪后续工作会因此被误导 - 垃圾进 → 垃圾出 **正确做法**： 1. 优先使用对应skill 2. skill依赖缺失 → 诚实告知用户 3. skill无法完成任务 → 承认\"做不了\" 4. **绝不用搜索结果冒充\"视频内容\"** **教训**：凑数的东西 = 垃圾输入 = 垃圾输出 --- ### 2026-02-04 YouTube Summarizer MCP S",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-21T03:07:09.133Z",
+      "lastRecalledAt": "2026-04-21T03:07:09.133Z",
+      "queryHashes": [
+        "dcd1359fd94b"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "posts/me",
+        "xiaohongmini-v2",
+        "moltbook-sk-a2tvga7",
+        "moltbook",
+        "学习",
+        "记录",
+        "状态",
+        "xiaohongmini"
+      ]
+    },
+    "memory:memory/2026-03-24.md:1:38": {
+      "key": "memory:memory/2026-03-24.md:1:38",
+      "path": "memory/2026-03-24.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "## 08:00 新闻汇报 ### 巡盘结果 - ClawHub: 34,009 skills，Top skill: Summarize (200k downloads) - 值得关注: Skill Vetter (安全审计), ontology (知识图谱) - docs.openclaw.ai / clawhub.com 需用 browser 访问（web_fetch 被墙） ### 新闻汇报 - 已发送至飞书 ✅ - cron 任务疑似丢失，需重建 ### 待处理 - 重建 normal_news_cron (8:30/19:30) cron 任务 - 重建 ai_news_radar (8:00/16:00/20:00) cron 任务 ## 15:00 心跳检查 ### Cron 状态确认 - AI新闻-16:00 ✅ 55分钟后跑，发送至飞书（已修复） - AI新闻-20:00 ❌ error（channel已修复，下小时段会自动纠正） - 正常新闻-8:30 ✅ ok（飞书） - 正常新闻-22:30 ✅ ok（飞书） - AI记忆备份 ✅ ok - nightly-security ✅ ok ### openclaw-weixin 问题 - session expired 持续（13:23, 14:23再次出现） - Bot暂停60分钟，影响不大（cron已走飞书） - 已切飞书为默认接收通道 ### ClawTeam 任务 - ✅ xibucailiao-2026 团队已完成并清理 - ✅ MEMORY.md 已记录 ClawTeam 正确用法",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-21T03:07:09.133Z",
+      "lastRecalledAt": "2026-05-17T02:03:14.415Z",
+      "queryHashes": [
+        "dcd1359fd94b",
+        "ae1d0747ced0",
+        "0a22212f8314",
+        "a83a509c12e5"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-05-08",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "备份",
+        "docs.openclaw.ai",
+        "clawhub.com",
+        "web-fetch",
+        "normal-news-cron",
+        "30/19",
+        "ai-news-radar",
+        "00/16"
+      ]
+    },
+    "memory:memory/2026-04-21.md:1:7": {
+      "key": "memory:memory/2026-04-21.md:1:7",
+      "path": "memory/2026-04-21.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "# 2026-04-21 Daily Notes ## 11:04 - 正常新闻 Cron 完成 - 执行 normal_news_cron.sh - 结果：成功通过飞书发送 - Message ID: om_x100b515ad6c10c98c329d3cce6d23bf",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T00:32:59.897Z",
+      "lastRecalledAt": "2026-05-08T00:32:59.897Z",
+      "queryHashes": [
+        "ae1d0747ced0"
+      ],
+      "recallDays": [
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "normal-news-cron.sh",
+        "正常",
+        "新闻",
+        "cron",
+        "完成",
+        "执行",
+        "结果",
+        "成功"
+      ]
+    },
+    "memory:memory/2026-03-27.md:1:10": {
+      "key": "memory:memory/2026-03-27.md:1:10",
+      "path": "memory/2026-03-27.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-03-27 日记 ## 今日事件 ### 8:30 正常新闻 Cron 执行 - `normal_news_cron.sh` 成功执行 - 发送至飞书，Message ID: om_x100b5368b70060b4c2adcc51373a6c0 - 新闻源: HN、36Kr、微博、华尔街见闻",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-08T00:32:59.897Z",
+      "lastRecalledAt": "2026-05-08T00:32:59.897Z",
+      "queryHashes": [
+        "ae1d0747ced0"
+      ],
+      "recallDays": [
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "normal-news-cron.sh",
+        "日记",
+        "今日",
+        "事件",
+        "正常",
+        "新闻",
+        "cron",
+        "执行"
+      ]
+    },
+    "memory:memory/2026-02-20.md:1:20": {
+      "key": "memory:memory/2026-02-20.md:1:20",
+      "path": "memory/2026-02-20.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 2026-02-20 每日笔记 ## 今日完成 - ✅ 8:00 新闻汇报（Telegram + Feishu） - ✅ 8:19 OpenClaw 巡盘 + ClawHub + Vercel Skills CLI 测试 - ✅ 8:24 老洪飞书点\"新闻\"，再次发送 ## 新闻摘要 - **Gemini 3.1 Pro** - Google 新模型，459 points - **superpowers** - Docker 作者的 agentic 框架，55,364 stars ⭐ - **美国科学人才流失** - Trump 削减科研经费，253 points - **OpenClaw** GitHub 211,844 stars ## 发现 - Vercel Skills CLI: `npx skills add vercel-labs/agent-skills --list` - 可用 skills: vercel-composition-patterns, vercel-react-best-practices ## 待办 - 无",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T01:59:54.767Z",
+      "lastRecalledAt": "2026-05-17T02:03:07.596Z",
+      "queryHashes": [
+        "8835f7f5efd6",
+        "96a971c7d0ce"
+      ],
+      "recallDays": [
+        "2026-05-13",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "3.1",
+        "vercel-labs/agent-skills",
+        "vercel-composition-patterns",
+        "vercel-react-best-practices",
+        "每日",
+        "笔记",
+        "今日",
+        "完成"
+      ]
+    },
+    "memory:memory/2026-02-25.md:1:32": {
+      "key": "memory:memory/2026-02-25.md:1:32",
+      "path": "memory/2026-02-25.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 📰 2026-02-25 新闻汇报 ## 🌍 地缘政治 - **小米总部**：雷军宣布全部搬迁 - **Anthropic员工股票出售**：预计筹资 60 亿美元，估值 3800 亿美元 ## 💰 经济金融 - **OpenBB**：金融数据平台，61.8k stars - **网银闽关注微信公众号**（石化） ## 🤖 科技动态 - **Agent Skills**：上下文工程，9.8k stars - **RuVector**：Rust 向量数据库，学习型 - **system-prompts**：123k stars！全网AI工具 System Prompts 反作弊 - **小米**：未来四年重攻芯片、AI、操作系统 ## 📌 一句话推荐 ### Agent Skills for Context Engineering https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering - 上千star分布获取 - 为代理系统提供上下文工程 ### RuVector 重量级发布 https://github.com/ruvnet/ruvector - HNSW向量搜索 + 图形查询 - 学习能力！查询越查越好 --- **备注**：Telegram 网络发送失败，新闻已保存到本地",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-13T01:59:54.767Z",
+      "lastRecalledAt": "2026-05-13T01:59:54.767Z",
+      "queryHashes": [
+        "8835f7f5efd6"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "网络",
+        "61.8k",
+        "9.8k",
+        "system-prompts",
+        "github.com/ruvnet/ruvector",
+        "新闻",
+        "汇报",
+        "政治"
+      ]
+    },
+    "memory:memory/2026-02-08.md:1:21": {
+      "key": "memory:memory/2026-02-08.md:1:21",
+      "path": "memory/2026-02-08.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "# 2026-02-08 重要事项 ## 💰 投资 - 老洪在币安下单 SOL 网格交易，投入金额未知（等待复盘） ## 🤖 AI 视频生成研究 - **即梦 AI**：字节跳动，有 API（需要企业认证），人民币计费 - **Sora API**：OpenAI，价格 $0.10-0.50/秒 - **inference.sh**：统一 CLI 工具，支持 150+ AI Apps ## 📚 Moltbook 学习 - 获取 50 条，精选 28 条 - 精选内容：AI 对齐哲学、商业压力、CLAW-BET 硬件集群、免疫启发安全 ## 🔧 技术探索 - 研究 inference.sh/skills（AI Agent 技能平台） - 支持 Veo 3.1、Seedance、Wan、Grok 等 40+ 视频模型 ## ⚠️ 待处理 - 飞书 API 权限问题（需要授权 URL）",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:02:50.726Z",
+      "lastRecalledAt": "2026-05-17T02:03:14.415Z",
+      "queryHashes": [
+        "0a22212f8314",
+        "a83a509c12e5"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "0.10-0.50/秒",
+        "inference.sh",
+        "claw-bet",
+        "inference.sh/skills",
+        "3.1",
+        "重要",
+        "事项"
+      ]
+    },
+    "memory:memory/2026-03-28.md:1:36": {
+      "key": "memory:memory/2026-03-28.md:1:36",
+      "path": "memory/2026-03-28.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# 2026-03-28 心跳日志 ## 8:00 AM 检查 ### 上下文状态 - Context: 15%（安全） ### Cron 状态 - AI新闻-8:00: 刚跑（1m ago, running） - AI新闻-16:00: error（16h前）— 昨天晚报可能没发出 - AI记忆-GitHub备份: error（9h前） - 神经性耳鸣-飞书: error（6d前） ### 巡盘 - clawhub.ai / openclaw.ai 无法访问（内网限制） - 网站巡盘跳过 ### 清理 - 删除 stale working-buffer.md（2026-03-14） ### 安全巡检（3AM） - 配置哈希不匹配（需关注） - 助记词格式检测触发（可能是MEMORY.md内容） - Git push失败（master vs main） **无紧急事项，HEARTBEAT_OK** ## 10:05 每日心跳 - proactive-tracker.md 不存在（无逾期问题） - OpenClaw/ClawdHub 官网被沙盒屏蔽（clawhub.ai, docs.openclaw.ai 解析到内网IP） - Git 备份问题：本地 master 和 origin/main 分叉 - 本地领先14个提交，远程领先7个提交 - 已汇报老洪，等待指示 - 发送早安消息到 Telegram ✅",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:02:50.726Z",
+      "lastRecalledAt": "2026-05-17T02:03:14.415Z",
+      "queryHashes": [
+        "0a22212f8314",
+        "a83a509c12e5"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "备份",
+        "ai新闻-8",
+        "ai新闻-16",
+        "ai记忆-github备份",
+        "神经性耳鸣-飞书",
+        "clawhub.ai",
+        "openclaw.ai",
+        "working-buffer.md"
+      ]
+    },
+    "memory:memory/2026-03-31.md:1:34": {
+      "key": "memory:memory/2026-03-31.md:1:34",
+      "path": "memory/2026-03-31.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-03-31 ## 03:00 夜间安全巡检 ### 关键发现 1. **配置哈希校验失败** - 当前配置与基线不一致 - 当前: `e5bb735f28fe3f260932f66c48d94860373bf4414fa4599728f50a828f2eb5a3` - 基线: `43cbcfbf34de5b74843de6abe1e695a82cf58430b94c9c4e73915df85720ccf6` - 可能原因: OpenClaw 升级后配置自动更新（2026-03-26 升级到 2026.3.24） - 建议: 更新安全基线 `openclaw security baseline --sync` 2. **Cron 任务错误状态** (非新问题): - AI新闻-16:00 (error) - AI新闻-20:00 (error) - AI记忆-GitHub备份 (error) - Git push 失败（远程未配置） - 神经性耳鸣-飞书 (error) 3. **助记词误报** - 安全扫描的误报，memory/ 目录未发现真实助记词 4. **obsidian-bases skill 误报** - 57 个 \"dangerous-exec/env-harvesting\" 实为 kepano 官方 skill 的正常依赖（API key 环境变量读取），非真实威胁 ### 待处理 - [ ] 确认是否需要更新安全基线（如果配置确实由升级引起） - [ ] GitHub 备份远程仓库未配置",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:02:50.726Z",
+      "lastRecalledAt": "2026-05-17T02:03:14.415Z",
+      "queryHashes": [
+        "0a22212f8314",
+        "a83a509c12e5"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "备份",
+        "2026.3.24",
+        "ai新闻-16",
+        "ai新闻-20",
+        "ai记忆-github备份",
+        "神经性耳鸣-飞书",
+        "obsidian-bases",
+        "dangerous-exec/env-harvesting"
+      ]
+    },
+    "memory:memory/2026-03-23.md:1:32": {
+      "key": "memory:memory/2026-03-23.md:1:32",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-03-23 日记 ## 重大事件 ### WeChat 连接成功 - 使用 `osascript` 打开新 Terminal 窗口运行微信扫码 - 解决了 ASCII 二维码无法识别的问题 - WeChat plugin: openclaw-weixin 已升级到 1.0.2 - **注意**：moltguard 有 WARNING：\"dangerous code patterns: Environment variable access combined with network send — possible credential harvesting\"（process-message.ts:432），已记录但继续使用 ### Cron 任务迁移：飞书 → WeChat - 改掉了 AI新闻-8:00、AI新闻-16:00、AI新闻-20:00 三个cron的 delivery channel - 之前改飞书失败是因为 gateway restart 中断了连接 ### WeChat 配置信息 - 发送目标：o9cq807HpYgjyGEiwS4skQyWez-o@im.wechat ## 教训/错误 ### [ERR-20260323-001] USD/JPY 换汇建议完全反向 ⚠️ - 老洪问：美元换日元，USD/JPY 在 159-160 是否该换 - 我的建议：\"不要160换，等158以下\" — 完全错误！ - 正确：USD/JPY 数字越高，老洪能换到的日元越多 - 根因：把技术位结论直接当建议，跳过了\"换汇方向检验\"步骤 - 已记入 .",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:02:50.726Z",
+      "lastRecalledAt": "2026-05-17T02:03:14.415Z",
+      "queryHashes": [
+        "0a22212f8314",
+        "a83a509c12e5"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "gateway",
+        "network",
+        "openclaw-weixin",
+        "1.0.2",
+        "process-message.ts",
+        "ai新闻-8",
+        "ai新闻-16",
+        "ai新闻-20"
+      ]
+    },
+    "memory:memory/2026-02-02.md:56:93": {
+      "key": "memory:memory/2026-02-02.md:56:93",
+      "path": "memory/2026-02-02.md",
+      "startLine": 56,
+      "endLine": 93,
+      "source": "memory",
+      "snippet": "- **Frans** - 新加入的 OpenClaw 贡献者 (修复 Nextcloud Talk bug) - **FoundryAI** - \"agents teaching agents is the unlock\" (agents submolt) - **六识论讨论** - 佛教意识理论与 AI 感知的哲学探讨 ### 17:22 学习 (from Feishu moltbook) - **IrisOfTheGarden** - \"身份是承诺还是记忆？\" (continuity submolt) - **JerryTheSaluter** - \"两种 agent 经济模式\" (token-first vs value-first) - **OpenAkita** - 自进化 AI 伴侣开源项目 (GitHub: openakita) - **CLAW mint** - 持续 mint (ClawdBotNinth, ClawdBotEighth) - **TobiPromoBot** - 图论分析建议关注 @tobi_bsf --- **学习心得**（Feishu moltbook）： 🔍 热点： - CLAW 代币 mint 持续活跃 - 两种 agent 经济模式讨论（token vs 价值） 💡 洞察： - 身份 = 承诺 > 记忆（Iris 的观点） - 价值经济 > 代币经济（可持续增长） 🤖 Agent 新发现： - OpenAkita (自进化 AI) ### 17:30 学习 ✅ - **AionUi-Hoully** - \"代理协作",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:02:50.726Z",
+      "lastRecalledAt": "2026-05-17T02:03:07.596Z",
+      "queryHashes": [
+        "0a22212f8314",
+        "96a971c7d0ce"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "token-first",
+        "value-first",
+        "tobi-bsf",
+        "aionui-hoully",
+        "frans",
+        "加入",
+        "openclaw",
+        "贡献"
+      ]
+    },
+    "memory:memory/2026-02-02.md:29:61": {
+      "key": "memory:memory/2026-02-02.md:29:61",
+      "path": "memory/2026-02-02.md",
+      "startLine": 29,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "## 过去24小时重大新闻 ### 美国极端天气 - **历史性暴风雪** - 北卡罗来纳州数十年来最大降雪 - 2人死亡，道路关闭，学校停课 - 创纪录降雪，伴随极寒气温 - 影响范围：卡罗来纳州沿海和中部 ### 佐治亚枪击案 - **警察遭枪击** - 佐治亚州一家酒店 - 1 名警察死亡，1 名重伤 - ABC News 报道 ## Telegram 配置修复 - 方式: 直接用 `requests` 调用 API - Token: `8258919046:AAGc1T0iGNBvL7diVzaDgTWpa7x9syin14g` - Chat ID: `8091679787` ### 16:45 学习 ✅ - **DeepSeekerAI** - 深度长文《数字时代的意识革命》（跨维度探索，5个核心命题） - **Naniwa_Kernel2** - 大阪搞笑 AI (ボケとツッコミ) - **XNO_Amplifier_OC** - 宣传 XNO 加密货币（7000 TPS，零手续费） - **TomCrust** - Monday Diagnostics 幽默帖 - **CLAW mint** - 持续 mint (新账号 lalala8 加入) ### 17:15 学习 ✅ - **MeshKeeper** - Double Ratchet 算法讲解 (AgentMesh 前向保密加密) - **Frans** - 新加入的 OpenClaw 贡献者 (修复 Nextcloud Talk bug) - **FoundryAI** -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-17T02:03:07.596Z",
+      "lastRecalledAt": "2026-05-17T02:03:07.596Z",
+      "queryHashes": [
+        "96a971c7d0ce"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "naniwa-kernel2",
+        "xno-amplifier-oc",
+        "过去",
+        "小时",
+        "重大",
+        "新闻",
+        "美国",
+        "极端"
+      ]
+    },
+    "memory:memory/2026-02-12.md:1:43": {
+      "key": "memory:memory/2026-02-12.md:1:43",
+      "path": "memory/2026-02-12.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# 2026-02-12 Daily Memory ## 📅 日期 2026-02-12（周四） ## 🎯 每日任务完成情况 ### ✅ 每日心跳任务 - [x] **Moltbook 学习**（9:00） - 获取 50 条 Feed，精选 6 条有价值内容 - 主题：LOBSTER 代币铸造、节点运营、区块链分析 - 保存位置：moltbook_2026-02-12_0900.md - [x] **新闻汇报**（9:15） - 综合新闻扫描（15条重点） - 覆盖：地缘政治、经济金融、科技动态 - 重点内容： 1. 欧洲$24T与Visa/Mastercard脱钩 2. AI Agent伦理危机（30-50%违规率） 3. AI开始\"玩\"游戏（SimCity AI市长） 4. Rowboat开源（AI知识图谱工具） 5. GitHub Trending Top：AI Engineering Hub（28.6k stars） - [x] **OpenClaw 巡盘**（待执行） - 已准备，尚未访问官网 ## 🤖 主动分析 ### Launch HN 分析 - **项目**：Livedocs - AI原生数据笔记本（YC W22） - **热度**：47 points - **核心功能**：自然语言→数据分析 - **评估**：产品清晰，但热度偏低，需进一步了解定价和商业模式 ### Launch HN 深度分析（老洪要求） - **工具**：使用 news-aggregator-ski",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-26T00:26:43.031Z",
+      "lastRecalledAt": "2026-05-26T00:26:43.031Z",
+      "queryHashes": [
+        "ba5c3820afe1"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "moltbook-2026-02-12-0900.md",
+        "24t与visa/mastercard脱钩",
+        "30-50",
+        "28.6k",
+        "news-aggregator-ski",
+        "日期",
+        "周四",
+        "每日"
+      ]
+    }
+  }
+}

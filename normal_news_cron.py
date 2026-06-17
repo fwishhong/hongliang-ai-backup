@@ -72,18 +72,19 @@ for i,(t,s,ti,h,u) in enumerate(tech[:5],1):
 report += f"### 📊 数据\n- 来源: HN、36Kr、微博、华尔街见闻\n- 时间: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
 
 # 发送飞书
-wechat_user = "o9cq807HpYgjyGEiwS4skQyWez-o@im.wechat"
+feishu_user = "ou_97e8a151e0a917023ffa52d4c1f20372"
 try:
     result = subprocess.run(
-        ["/Users/hongliang/bin/weclaw", "send",
-         "--to", wechat_user,
-         "--text", report[:4000]],
-        capture_output=True, text=True, timeout=30
+        ["openclaw", "message", "send",
+         "--channel", "feishu",
+         "--target", feishu_user,
+         "--message", report[:4000]],
+        capture_output=True, text=True, timeout=60
     )
     print(result.stdout)
     if result.returncode == 0:
-        print("=== 发送成功 ===")
+        print("=== 飞书发送成功 ===")
     else:
-        print(f"发送结果: {result.stdout}")
+        print(f"发送失败: {result.stderr}")
 except Exception as e:
     print(f"发送失败: {e}")

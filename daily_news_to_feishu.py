@@ -51,18 +51,19 @@ def send_to_feishu(content, title):
         print("   FEISHU_DOC_TOKEN")
         return False
     
-    wechat_user = "o9cq807HpYgjyGEiwS4skQyWez-o@im.wechat"
+    feishu_user = "ou_97e8a151e0a917023ffa52d4c1f20372"
     import subprocess
     result = subprocess.run(
-        ["/Users/hongliang/bin/weclaw", "send",
-         "--to", wechat_user,
-         "--text", content[:4000]],
-        capture_output=True, text=True, timeout=30
+        ["openclaw", "message", "send",
+         "--channel", "feishu",
+         "--target", feishu_user,
+         "--message", content[:4000]],
+        capture_output=True, text=True, timeout=60
     )
     if result.returncode == 0:
-        print(f"✅ 发送到微信: 成功")
+        print(f"✅ 发送到飞书: 成功")
     else:
-        print(f"❌ 微信发送失败: {result.stderr}")
+        print(f"❌ 飞书发送失败: {result.stderr}")
     print(f"📤 准备发送到飞书文档: {FEISHU_DOC_TOKEN}")
     return True
 

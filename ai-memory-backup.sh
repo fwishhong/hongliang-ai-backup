@@ -40,8 +40,8 @@ for item in "${BACKUP_FILES[@]}"; do
     fi
 done
 
-# 检查是否有变化
-if git diff --quiet 2>/dev/null; then
+# 检查是否有变化（空仓库没有commit时跳过）
+if git rev-parse HEAD >/dev/null 2>&1 && git diff --quiet 2>/dev/null; then
     echo "没有变化，无需提交"
     exit 0
 fi
